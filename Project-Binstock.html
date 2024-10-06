@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./project.css">
+    <script src="./main/mainpage.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> 
+    
+
+</head>
+<body>
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+             <img src="./images/Copy of SITE1.png" alt=""></a>
+
+        <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarScroll">
+            <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" >
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#ipoclick">IPO</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="#foot">COMMUNITY</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle active" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        PRODUCTS
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                        <li><a class="dropdown-item" href="#">PRODUCT-1</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">PRODUCT-2</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">PRODUCT-3</a></li>
+                    </ul>
+                </li>   
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">BROKERS  <i class="fa-solid fa-arrow-trend-up"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">LIVE NEWS <span class="livenews">NEW</span></a>
+                </li>
+
+                <li class="nav-item" id="nav-sign">
+                    <a class="nav-link active" href="#" data-bs-toggle="modal" data-bs-target="#signInModal">SignIN</a>
+                </li>
+                <li class="nav-item" id="nav-signup">
+                    <a  class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#signUpModal">Sign up Now</a>
+                  </li>
+              
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+
+
+ 
+<div class="modal fade" id="signInModal" aria-labelledby="signInModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="signInModalLabel">Sign In</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="sign-in-form">
+                    <form method="post">
+                        <div class="text-center mb-4">
+                            <img src="./images/Copy of SITE1.png" alt="Bluestock" width="150">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" class="form-control" id="email" placeholder="email" autocomplete="off" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" id="password" autocomplete="off" required />
+                            <small class="form-text text-end">
+                                <a href="#" id="forgotPasswordLink">Forgot Password?</a>
+                            </small>
+                        </div>
+                        <div class="form-group">
+                            <div class="g-recaptcha" data-sitekey="your-site-key"></div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Sign In</button>
+                        <div class="form-footer">
+                            <p>or sign in with</p>
+                            <button type="button" class="btn btn-light w-100 mb-3">
+                                <img src="./images/google image.jpeg" alt="Google" width="20"> Continue with Google
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="modal fade" id="signUpModal" tabindex="-1" aria-labelledby="signUpModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="signUpModalLabel">Create an Account</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="text-center mb-4">
+                        <img src="./images/Copy of SITE1.png" alt="Your Logo" width="100">
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Enter name" required>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="email">Email Address</label>
+                        <input type="email" class="form-control" id="emailtwo" placeholder="hello@bluestock.in" required>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" id="passwordtwo" placeholder="Password" required>
+                    </div>
+                    <div class="mb-3">
+                        <p>By continuing, you agree to our <a href="#" style="color: blue;">terms of service</a>.</p>
+                    </div>
+                    <div class="form-group mb-3">
+                        <div class="g-recaptcha" data-sitekey="your-site-key"></div>
+                    </div>
+                    <div class="d-grid mb-3">
+                        <button type="submit" class="btn btn-primary w-100" id="nav-signup">Sign up</button>
+                    </div>
+                    <div class="form-footer text-center">
+                        <p>or sign up with</p>
+                        <button type="button" class="btn btn-light w-100 mb-3" id="nav-sign">
+                            <img src="./images/google image.jpeg" alt="Google" width="20"> Continue with Google
+                        </button>
+                        <p>Already have an account? <a href="#" style="color: blue;">Sign in here</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="modal fade" id="forgotPasswordModal" aria-labelledby="forgotPasswordModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header justify-content-center text-center">
+                <div class="w-100">
+                    <img src="./images/Copy of SITE1.png" alt="Your Logo" width="100" class="mb-2">
+                    <h5 class="modal-title" id="forgotPasswordModalLabel">Forgot Password?</h5>
+                </div>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p class="text-center mb-4">Enter your email address to get the password reset link.</p>
+                <form id="resetPasswordForm">
+                    <div class="form-group mb-3">
+                        <label for="forgotEmail">Email Address</label>
+                        <input type="email" class="form-control" id="forgotEmail" placeholder="hello@bluestock.in" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Password Reset</button>
+                </form>
+                <div class="text-center mt-3">
+                    <a href="#" id="backToLogin">Back to login</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container mt-5">
+    <div class="breadcrumb">
+        <a href="#">Bluestock</a> > 
+        <a href="#">IPO</a> > 
+        <p>Upcoming IPO</p>
+    </div>
+    
+    <h3 class="title">Upcoming IPO</h3>
+    
+    <p class="description">
+        Companies that have filed for an IPO with SEBI. Few details might be disclosed by the companies later.
+    </p>
+    <div class="row">
+
+        <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="ipo-card" id="ipoclick">
+                <div class="header">
+                    <img src="../images/company logos/Nova LTD.png" alt="Company Logo">
+                    <h5>Navi AgriTech Ltd.</h5>
+                </div>
+                <div class="details">
+                    <div class="row">
+                        <div class="col-md-4"><strong>Price Band:</strong> ₹100-₹120</div>
+                        <div class="col-md-4"><strong>Open Date:</strong> 2024-09-01</div>
+                        <div class="col-md-4"><strong>Close Date:</strong> 2024-09-05</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4"><strong>Issue Size:</strong> ₹500 Cr</div>
+                        <div class="col-md-4"><strong>Issue Type:</strong> Book Building</div>
+                        <div class="col-md-4"><strong>Listing Date:</strong> 2024-09-15</div>
+                    </div>
+                </div>
+                <div class="btn-group">
+                    <button class="btn btn-primary">RHP</button>
+                    <button class="btn btn-secondary">DRHP</button>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="ipo-card">
+                <div class="header">
+                    <img src="https://i0.wp.com/www.rbsworld.co.in/blog/wp-content/uploads/2023/05/rana3.jpg?resize=1024%2C714&ssl=1" alt="Company Logo">
+                    <h5>EPACK Durables Ltd.</h5>
+                </div>
+                <div class="details">
+                    <div class="row">
+                        <div class="col-md-4"><strong>Price Band:</strong> ₹90-₹110</div>
+                        <div class="col-md-4"><strong>Open Date:</strong> 2024-09-03</div>
+                        <div class="col-md-4"><strong>Close Date:</strong> 2024-09-07</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4"><strong>Issue Size:</strong> ₹400 Cr</div>
+                        <div class="col-md-4"><strong>Issue Type:</strong> Book Building</div>
+                        <div class="col-md-4"><strong>Listing Date:</strong> 2024-09-18</div>
+                    </div>
+                </div>
+                <div class="btn-group">
+                    <button class="btn btn-primary">RHP</button>
+                    <button class="btn btn-secondary">DRHP</button>
+                </div>
+            </div>
+        </div>
+
+       
+        <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="ipo-card">
+                <div class="header">
+                    <img src="./images/company logos/rk_sawamy.jpeg" alt="Company Logo">
+                    <h5>RK Swamy Ltd.</h5>
+                </div>
+                <div class="details">
+                    <div class="row">
+                        <div class="col-md-4"><strong>Price Band:</strong> ₹80-₹100</div>
+                        <div class="col-md-4"><strong>Open Date:</strong> 2024-09-05</div>
+                        <div class="col-md-4"><strong>Close Date:</strong> 2024-09-09</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4"><strong>Issue Size:</strong> ₹600 Cr</div>
+                        <div class="col-md-4"><strong>Issue Type:</strong> Fixed Price</div>
+                        <div class="col-md-4"><strong>Listing Date:</strong> 2024-09-20</div>
+                    </div>
+                </div>
+                <div class="btn-group">
+                    <button class="btn btn-primary">RHP</button>
+                    <button class="btn btn-secondary">DRHP</button>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="ipo-card">
+                <div class="header">
+                    <img src="./images/company logos/Oyo.jpeg" alt="Company Logo">
+                    <h5>Oravel Stays Ltd.</h5>
+                </div>
+                <div class="details">
+                    <div class="row">
+                        <div class="col-md-4"><strong>Price Band:</strong> ₹150-₹180</div>
+                        <div class="col-md-4"><strong>Open Date:</strong> 2024-09-10</div>
+                        <div class="col-md-4"><strong>Close Date:</strong> 2024-09-14</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4"><strong>Issue Size:</strong> ₹700 Cr</div>
+                        <div class="col-md-4"><strong>Issue Type:</strong> Book Building</div>
+                        <div class="col-md-4"><strong>Listing Date:</strong> 2024-09-22</div>
+                    </div>
+                </div>
+                <div class="btn-group">
+                    <button class="btn btn-primary">RHP</button>
+                    <button class="btn btn-secondary">DRHP</button>
+                </div>
+            </div>
+        </div>
+
+ 
+        <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="ipo-card">
+                <div class="header">
+                    <img src="./images/company logos/Boat-Logo_2.jpeg" alt="Company Logo">
+                    <h5>Imagine Marketing Ltd.</h5>
+                </div>
+                <div class="details">
+                    <div class="row">
+                        <div class="col-md-4"><strong>Price Band:</strong> ₹95-₹130</div>
+                        <div class="col-md-4"><strong>Open Date:</strong> 2024-09-13</div>
+                        <div class="col-md-4"><strong>Close Date:</strong> 2024-09-17</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4"><strong>Issue Size:</strong> ₹620 Cr</div>
+                        <div class="col-md-4"><strong>Issue Type:</strong> Book Building</div>
+                        <div class="col-md-4"><strong>Listing Date:</strong> 2024-09-27</div>
+                    </div>
+                </div>
+                <div class="btn-group">
+                    <button class="btn btn-primary">RHP</button>
+                    <button class="btn btn-secondary">DRHP</button>
+                </div>
+            </div>
+        </div>
+ 
+        
+        <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="ipo-card">
+                <div class="header">
+                    <img src="./images/company logos/Kids Clinic India.png" alt="Company Logo">
+                    <h5>Kids Clinic India Ltd.</h5>
+                </div>
+                <div class="details">
+                    <div class="row">
+                        <div class="col-md-4"><strong>Price Band:</strong> ₹140-₹170</div>
+                        <div class="col-md-4"><strong>Open Date:</strong> 2024-09-14</div>
+                        <div class="col-md-4"><strong>Close Date:</strong> 2024-09-18</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4"><strong>Issue Size:</strong> ₹800 Cr</div>
+                        <div class="col-md-4"><strong>Issue Type:</strong> Book Building</div>
+                        <div class="col-md-4"><strong>Listing Date:</strong> 2024-09-29</div>
+                    </div>
+                </div>
+                <div class="btn-group">
+                    <button class="btn btn-primary">RHP</button>
+                    <button class="btn btn-secondary">DRHP</button>
+                </div>
+            </div>
+        </div>
+
+       
+        <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="ipo-card">
+                <div class="header">
+                    <img src="./images/company logos/Ola-Electric-Logo.jpeg" alt="Company Logo">
+                    <h5>OLA Electric Mobility Ltd.</h5>
+                </div>
+                <div class="details">
+                    <div class="row">
+                        <div class="col-md-4"><strong>Price Band:</strong> ₹110-₹140</div>
+                        <div class="col-md-4"><strong>Open Date:</strong> 2024-09-16</div>
+                        <div class="col-md-4"><strong>Close Date:</strong> 2024-09-20</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4"><strong>Issue Size:</strong> ₹750 Cr</div>
+                        <div class="col-md-4"><strong>Issue Type:</strong> Book Building</div>
+                        <div class="col-md-4"><strong>Listing Date:</strong> 2024-10-03</div>
+                    </div>
+                </div>
+                <div class="btn-group">
+                    <button class="btn btn-primary">RHP</button>
+                    <button class="btn btn-secondary">DRHP</button>
+                </div>
+            </div>
+        </div>
+
+       
+        <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="ipo-card">
+                <div class="header">
+                    <img src= "./images/company logos/mobikwik-logo.jpeg" alt="Company Logo">
+                    <h5>One Mobikwik Systems Ltd.</h5>
+                </div>
+                <div class="details">
+                    <div class="row">
+                        <div class="col-md-4"><strong>Price Band:</strong> ₹115-₹145</div>
+                        <div class="col-md-4"><strong>Open Date:</strong> 2024-09-18</div>
+                        <div class="col-md-4"><strong>Close Date:</strong> 2024-09-22</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4"><strong>Issue Size:</strong> ₹680 Cr</div>
+                        <div class="col-md-4"><strong>Issue Type:</strong> Book Building</div>
+                        <div class="col-md-4"><strong>Listing Date:</strong> 2024-10-05</div>
+                    </div>
+                </div>
+                <div class="btn-group">
+                    <button class="btn btn-primary">RHP</button>
+                    <button class="btn btn-secondary">DRHP</button>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="ipo-card">
+                <div class="header">
+                    <img src= "./images/company logos/Ixigo_logo.jpeg" alt="Company Logo">
+                    <h5> Le Travenues Technolgy.</h5>
+                </div>
+                <div class="details">
+                    <div class="row">
+                        <div class="col-md-4"><strong>Price Band:</strong> ₹130-₹160</div>
+                        <div class="col-md-4"><strong>Open Date:</strong> 2024-09-20</div>
+                        <div class="col-md-4"><strong>Close Date:</strong> 2024-09-24</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4"><strong>Issue Size:</strong> ₹720 Cr</div>
+                        <div class="col-md-4"><strong>Issue Type:</strong> Book Building</div>
+                        <div class="col-md-4"><strong>Listing Date:</strong> 2024-10-10</div>
+                    </div>
+                </div>
+                <div class="btn-group">
+                    <button class="btn btn-primary">RHP</button>
+                    <button class="btn btn-secondary">DRHP</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="ipo-card">
+                <div class="header">
+                    <img src="./images/company logos/cmr-green-technologies.jpeg" alt="Company Logo">
+                    <h5> CMR Green Technolgies</h5>
+                </div>
+                <div class="details">
+                    <div class="row">
+                        <div class="col-md-4"><strong>Price Band:</strong> ₹90-₹110</div>
+                        <div class="col-md-4"><strong>Open Date:</strong> 2024-09-03</div>
+                        <div class="col-md-4"><strong>Close Date:</strong> 2024-09-07</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4"><strong>Issue Size:</strong> ₹400 Cr</div>
+                        <div class="col-md-4"><strong>Issue Type:</strong> Book Building</div>
+                        <div class="col-md-4"><strong>Listing Date:</strong> 2024-09-18</div>
+                    </div>
+                </div>
+                <div class="btn-group">
+                    <button class="btn btn-primary">RHP</button>
+                    <button class="btn btn-secondary">DRHP</button>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="ipo-card">
+                <div class="header">
+                    <img src="./images/company logos/Wellness-Forever.jpeg" alt="Company Logo">
+                    <h5> Wellness Forever.</h5>
+                </div>
+                <div class="details">
+                    <div class="row">
+                        <div class="col-md-4"><strong>Price Band:</strong> ₹90-₹110</div>
+                        <div class="col-md-4"><strong>Open Date:</strong> 2024-09-03</div>
+                        <div class="col-md-4"><strong>Close Date:</strong> 2024-09-07</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4"><strong>Issue Size:</strong> ₹400 Cr</div>
+                        <div class="col-md-4"><strong>Issue Type:</strong> Book Building</div>
+                        <div class="col-md-4"><strong>Listing Date:</strong> 2024-09-18</div>
+                    </div>
+                </div>
+                <div class="btn-group">
+                    <button class="btn btn-primary">RHP</button>
+                    <button class="btn btn-secondary">DRHP</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="ipo-card">
+                <div class="header">
+                    <img src="./images/company logos/Pkh ventures.jpeg" alt="Company Logo">
+                    <h5> PKH Ventures Ltd.</h5>
+                </div>
+                <div class="details">
+                    <div class="row">
+                        <div class="col-md-4"><strong>Price Band:</strong> ₹90-₹110</div>
+                        <div class="col-md-4"><strong>Open Date:</strong> 2024-09-03</div>
+                        <div class="col-md-4"><strong>Close Date:</strong> 2024-09-07</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4"><strong>Issue Size:</strong> ₹400 Cr</div>
+                        <div class="col-md-4"><strong>Issue Type:</strong> Book Building</div>
+                        <div class="col-md-4"><strong>Listing Date:</strong> 2024-09-18</div>
+                    </div>
+                </div>
+                <div class="btn-group">
+                    <button class="btn btn-primary">RHP</button>
+                    <button class="btn btn-secondary">DRHP</button>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+
+<div class="container mt-5">
+    <h2 class="mb-4">Frequently Asked Questions</h2>
+    <div class="accordion" id="faqAccordion">
+        
+        <!-- FAQ 1 -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                    How to Subscribe to an IPO?
+                    <span class="faq-icon"></span>
+                </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    <ul>
+                        <li>Step 1: Log in to your registered service provider.</li>
+                        <li>Step 2: Click on the IPO button.</li>
+                        <li>Step 3: Select the IPO you want to bid and enter the relevant details.</li>
+                        <li>Step 4: Your subscription will be completed once you make the payment or give permission.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Should I Buy An IPO First Day?
+                    <span class="faq-icon"></span>
+                </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                 </div>
+            </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    How Do You Know if an IPO is Good?
+                    <span class="faq-icon"></span>
+                </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                 </div>
+            </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFour">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    How to check IPO start date?
+                    <span class="faq-icon"></span>
+                </button>
+            </h2>
+            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                 </div>
+            </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFive">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                   what is issue size?
+                    <span class="faq-icon"></span>
+                </button>
+            </h2>
+            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                 </div>
+            </div>
+        </div>
+        
+<!-- FAQ---6 -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingsix">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsesix" aria-expanded="false" aria-controls="collapsesix">
+                  What is IPO GMP?
+                    <span class="faq-icon"></span>
+                </button>
+            </h2>
+            <div id="collapsesix" class="accordion-collapse collapse" aria-labelledby="headingsix" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                 </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="footer" id="foot">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2">
+                <div class="footer-title">Resources</div>
+                <ul class="footer-links">
+                    <li><a href="#">Trading View</a></li>
+                    <li><a href="#">NSE Holidays</a></li>
+                    <li><a href="#">e-Voting CDSL</a></li>
+                    <li><a href="#">e-Voting NSDL</a></li>
+                    <li><a href="#">Market Timings</a></li>
+                </ul></div>
+
+<div class="col-md-2">
+    <div class="footer-title">
+        Company
+    </div>
+    <ul class="footer-links">
+        <li><a href="#">Carrers</a></li>
+        <li><a href="#">Contact-US</a></li>
+        <li><a href="#"> About us</a></li>
+        <li><a href="#"> Community</a></li>
+        <li><a href="#"> Blogs</a></li>
+    </ul></div>
+
+    <div class="col-md-2">
+        <div class="footer-title">
+            Offerings
+        </div>
+        <ul class="footer-links">
+            <li><a href="#"> Compare Broker</a></li>
+            <li><a href="#">Fin Calculations</a></li>
+            <li><a href="#"> IPO</a></li>
+            <li><a href="#"> All Brokers</a></li>
+            <li><a href="#"> Products</a></li>
+        </ul></div>
+
+
+        <div class="col-md-2">
+            <div class="footer-title">
+                Links
+            </div>
+            <ul class="footer-links">
+                <li><a href="#">Shark Investor</a></li>
+                <li><a href="#">Mutual Funds</a></li>
+                <li><a href="#"> Sitemap</a></li>
+                <li><a href="#">  Indian indices</a></li>
+                <li><a href="#">  Bug Bountry Program</a></li>
+            </ul></div>
+
+            <div class="col-md-2">
+                <div class="footer-title">
+                     Policy
+                </div>
+                <ul class="footer-links">
+                    <li><a href="#"> Terms&Conditions</a></li>
+                    <li><a href="#"> Privacy policy</a></li>
+                    <li><a href="#"> Refund Policy</a></li>
+                    <li><a href="#">  Disclaimer</a></li>
+                    <li><a href="#">  Trust & security</a></li>
+                </ul></div>
+
+                <div class="col-md-2 text-center">
+                    <img src="./images/Copy of SITE1.png" alt="Bluestock" style="max-width: 120px;"/>
+                    <p>Pune,Maharastra</p>
+                    <p>MSME Registration No:UDYAM-MH-01-0138001</p>
+                    <div class="social-icons">
+                        <i class="fa-brands fa-square-facebook"></i>
+                        <i class="fa-brands fa-square-x-twitter"></i>
+                        <i class="fa-brands fa-square-instagram"></i>
+                        <i class="fa-brands fa-square-youtube"></i>
+                        <i class="fa-brands fa-linkedin"></i>
+                    </div>
+                </div> 
+              </div>
+
+             <span> <h3>#Start-up<b>INDIA</b></h3></span>
+              <div class=" footer-bottom">
+                <p>Disclaimer: We are not a SEBI registered research analyst company. we don`t recommend to buy/sell stock tips ,or investing and trading advice
+                    .all stock scripts shown in Blustock APP,website,all social media handles are for educational purpose only.</p>
+                    <div class='final-text'>
+            <h6>Blustock Fintech ALL Rights Reserved</h6></div>
+            <p>Made with <span style="color: red;">♥</span> in Pune, Maharashtra</p>
+        </div>
+              </div>
+</div>
+
+
+
+
+<script>
+
+ 
+  document.addEventListener('DOMContentLoaded', function () {
+    var  signInModal = document.getElementById('signInModal');
+    signInModal.addEventListener('show.bs.modal', function () {
+        document.getElementById('email').value = '';
+        document.getElementById('password').value = '';
+    });
+
+    var signUpModal = document.getElementById('signUpModal');
+    signUpModal.addEventListener('show.bs.modal', function () {
+        document.getElementById('emailtwo').value = '';
+        document.getElementById('passwordtwo').value = '';
+    });
+
+    document.getElementById('forgotPasswordLink').addEventListener('click', function (event) {
+        event.preventDefault();
+        var signInBootstrapModal = bootstrap.Modal.getInstance(signInModal);
+        signInBootstrapModal.hide();  
+
+        var forgotPasswordModal = new bootstrap.Modal(document.getElementById('forgotPasswordModal'));
+        forgotPasswordModal.show();  
+    });
+
+    document.getElementById('backToLogin').addEventListener('click', function (event) {
+        event.preventDefault();
+        var forgotPasswordModal = bootstrap.Modal.getInstance(document.getElementById('forgotPasswordModal'));
+        forgotPasswordModal.hide();  
+
+        var signInBootstrapModal = new bootstrap.Modal(signInModal);
+        signInBootstrapModal.show(); 
+    });
+  });
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
